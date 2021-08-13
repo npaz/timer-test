@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/timeDetailFragment">
+    <fragment
+        android:id="@+id/timeDetailFragment"
+        android:name="pt.mrpeace.development.timeexampleapp.view.TimeDetailFragment"
+        android:label="fragment_time_detail"
+        tools:layout="@layout/fragment_time_detail" >
+        <action
+            android:id="@+id/action_timeDetailFragment_to_timePickerFragment"
+            app:destination="@id/timePickerFragment" />
+        <action
+            android:id="@+id/action_timeDetailFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timePickerFragment"
+        android:name="pt.mrpeace.development.timeexampleapp.view.TimePickerFragment"
+        android:label="fragment_time_picker"
+        tools:layout="@layout/fragment_time_picker" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="pt.mrpeace.development.timeexampleapp.view.AboutFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_about" />
+</navigation>
